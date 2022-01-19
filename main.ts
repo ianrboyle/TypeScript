@@ -1,17 +1,29 @@
-// setting a type to a variable
-let a: number;
-let b: boolean;
-let c: string;
-let d: any;
-let e: number[] = [1, 2, 3]
-let f: any[] = [1, true, 'a', false]
+//in line annotation - a tad verbose
 
+// let drawPoint = (point: { x: number, y: number}) => {
 
-//enum
-enum Color { Red = 0, Green = 1, Blue = 2}
-let backgroundColor = Color.Blue;
+// }
+// use interfaces instead
+// interfaces - purely for declaration, no implementation
 
-let message;
-message = "abc"
-let endsWithC = (<string>message).endsWith("c")
-let alternativeWat = (message as string).endsWith('c')
+// interface Point {
+//   x: number,
+//   y: number,
+//   draw: () => void
+// }
+
+// for cohesion, we need a class, instead of interface
+// allows inclusion of functions, where interfaces do not
+class Point {
+  x: number;
+  y: number;
+  draw() {
+
+  }
+  getDistance(another: Point) {}
+}
+
+let drawPoint = (point: Point) => {
+
+}
+
