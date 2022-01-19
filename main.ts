@@ -15,9 +15,11 @@
 // for cohesion, we need a class, instead of interface
 // allows inclusion of functions, where interfaces do not
 class Point {
-  x: number;
-  y: number;
-  
+
+  //private keyword makes a variable private - its an access modifier- variables are not accessible outside of the class Point - once a point object is initialized, it cannot be changed
+  private x: number;
+  private y: number;
+
   //adding a question mark makes the parameters optional
   constructor(x?: number, y?: number) {
     this.x = x;
