@@ -10,3 +10,8 @@ let f: any[] = [1, true, 'a', false]
 //enum
 enum Color { Red = 0, Green = 1, Blue = 2}
 let backgroundColor = Color.Blue;
+
+let message;
+message = "abc"
+let endsWithC = (<string>message).endsWith("c")
+let alternativeWat = (message as string).endsWith('c')
