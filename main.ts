@@ -17,13 +17,19 @@
 class Point {
   x: number;
   y: number;
+  
+  //adding a question mark makes the parameters optional
+  constructor(x?: number, y?: number) {
+    this.x = x;
+    this.y = y;
+  }
   draw() {
     console.log("X: " + this.x + ", Y: " + this.y)
   }
-  getDistance(another: Point) {}
 }
 // must initialize Point as a new operator
-let point = new Point;
-point.x = 1;
-point.y = 2;
+// uses constructor - gets rid of need to declare x and y in the point.x = 1 way
+let point = new Point(1, 2);
+// point.x = 1;
+// point.y = 2;
 point.draw();
