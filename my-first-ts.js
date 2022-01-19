@@ -1,4 +1,6 @@
-function log(message) {
-    console.log(message);
+function doSomething() {
+    for (var i = 0; i < 10; i++) {
+        console.log(i);
+    }
 }
-var message = "Hello World";
+doSomething();
